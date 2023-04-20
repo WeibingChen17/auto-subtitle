@@ -1,6 +1,6 @@
 # Automatic subtitles in your videos
 
-This repository uses `ffmpeg` and [OpenAI's Whisper](https://openai.com/blog/whisper) to automatically generate and overlay subtitles on any video.
+This repository uses `ffmpeg` and [OpenAI's Whisper](https://openai.com/blog/whisper) to automatically extract subtitles from video or audio. It also generates a subtitled video if it is a video.
 
 ## Installation
 
