@@ -87,7 +87,7 @@ def main():
         return
 
     for path, srt_path in subtitles.items():
-        # Check if the file is audio only; if so, skip it.
+        # If the input file is audio only, skip it.
         if _is_audio_only(path):
             print(
                 f"Warning: the file {path} is audio only. Skip generating subtitled vidoe for it."
@@ -135,7 +135,6 @@ def get_audio(paths) -> dict[str, str]:
 def _is_audio_only(path: str) -> bool:
     media = ffmpeg.probe(file_path)
 
-    # check if media file contains only audio or also video
     for stream in media["streams"]:
         if stream["codec_type"] == "video":
             return False
